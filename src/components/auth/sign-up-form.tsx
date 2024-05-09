@@ -39,14 +39,13 @@ export default function SignUpForm({
   function handleSignIn() {
     return openModal('LOGIN_VIEW');
   }
-  function onSubmit({ name, email, password, remember_me }: SignUpInputType) {
+  function onSubmit({ first_name, email, password}: SignUpInputType) {
     signUp({
-      name,
+      first_name,
       email,
       password,
-      remember_me,
     });
-    console.log(name, email, password, 'sign form values');
+    console.log(name, email, password, 'sign form values=================================================================');
   }
   return (
     <div
@@ -96,10 +95,10 @@ export default function SignUpForm({
                 label={t('forms:label-name') as string}
                 type="text"
                 variant="solid"
-                {...register('name', {
+                {...register('first_name', {
                   required: 'forms:name-required',
                 })}
-                error={errors.name?.message}
+                error={errors.first_name?.message}
                 lang={lang}
               />
               <Input

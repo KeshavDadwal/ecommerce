@@ -1,6 +1,6 @@
 export const API_ENDPOINTS = {
   LOGIN: '/api/login',
-  REGISTER: '/api/register',
+  REGISTER: '/user',
   LOGOUT: '/api/logout',
   FORGET_PASSWORD: '/api/forget-password',
   CATEGORIES: '/api/categories.json',
